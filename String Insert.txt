@@ -1,0 +1,23 @@
+import java.lang.String;
+import java.io.*;
+public class string1 {
+
+	public static void main(String[] args) throws IOException
+	{
+	 StringBuffer sb = new StringBuffer();
+	 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	 System.out.println("Enter the first name:");
+	 String first = br.readLine();
+	 System.out.println("Enter the middle name:");
+	 String second = br.readLine();
+	 System.out.println("Enter the last name:");
+	 String third = br.readLine();
+	 sb.append(first);
+	 sb.append(third);
+	 System.out.println("Name:  "+sb);
+	 int n = first.length();
+	 sb.insert(n,second);
+	 System.out.println("Name:  "+sb);
+	}
+
+}
