@@ -1,0 +1,49 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.*;
+class BankAcct
+{
+ private double bal;
+ BankAcct(double b)
+ {
+  bal = b;	 
+ }
+ void contact(double r) throws IOException
+ {
+  BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+  System.out.println("Enter the Password=");
+  String passwd = br.readLine();
+ if(passwd.equals("12345"))
+ {
+	 Interest in =new Interest(r);
+	 in.calculateInterest();
+ }
+ else
+ {
+	 System.out.println("Wrong password");
+	 return;
+ }
+}
+private class Interest
+{
+ private double rate;
+ Interest(double r)
+ {
+  rate = r;	 
+ }
+ void calculateInterest()
+ {
+  double interest = bal*rate/100;
+  bal = bal + interest;
+  System.out.println("Updated Password="+bal);
+  }
+ }
+}
+class polo
+{
+ public static void main(String args[])throws IOException
+ {
+  BankAcct account = new BankAcct(10000);
+  account.contact(9.5);
+ }
+}

@@ -1,0 +1,41 @@
+//To create a refrnce object
+class one
+{
+ int x;
+ two t;
+ one(two t)
+ {
+  this.t=t;
+  x=10;
+ }
+ void display()
+ {
+  System.out.println("String for one = "+x);	 
+  t.display();
+  System.out.println("String = "+t.y);
+ }
+}
+class two
+{
+ int y;
+ two(int y)
+ {
+  this.y=y;	 
+ }
+ void display()
+ {
+	 System.out.println("String = "+y);	 
+ }
+}
+public class polo 
+{
+
+	public static void main(String[] args) 
+	{
+     two obj2 = new two(22);
+     one obj1 = new one(obj2);
+     obj1.display();
+
+	}
+
+}
