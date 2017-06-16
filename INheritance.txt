@@ -1,0 +1,27 @@
+import java.io.*;
+class One
+{
+ int i=0;
+ void show()
+ {
+  System.out.println("Super class Method = "+i);	 
+ }
+}
+class Two extends One
+{
+ int i=20;
+ void show()
+ {
+	 System.out.println("Sub class Method = "+i);	 
+ }
+}
+public class file1 
+{
+
+	public static void main(String[] args) throws IOException
+	{
+     Two t = new Two();
+     t.show();
+	}
+
+}
